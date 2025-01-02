@@ -1,46 +1,47 @@
 import Cookies from 'js-cookie'
+
 import Header from '../Header'
 import Footer from '../Footer'
 
 import './index.css'
 
 const Account = props => {
-  const username = localStorage.getItem('username')
-  const password = localStorage.getItem('password')
-  // to convert into astric we can use the repeat function
-  // syntax : string.repeat(count);
+  // console.log(props)
 
-  const passwordInAsterisk = '*'.repeat(password.length)
-  const onClickLogout = () => {
-    const {history} = props
+  const logoutFromAccount = () => {
     Cookies.remove('jwt_token')
+    const {history} = props
     history.replace('/login')
   }
 
   return (
-    <div className="account-root-container">
+    <div className="account-page-main-container">
       <Header />
       <div className="account-details-container">
-        <p className="account-heading">Account</p>
-        <hr className="hr-line" />
-        <div className="member-details-container">
-          <p className="membership-heading">Member ship</p>
-          <div>
-            <p className="membership-email">{username}@gmail.com</p>
-            <p className="membership-password">Password {passwordInAsterisk}</p>
+        <h2 className="account-heading">Account</h2>
+        <hr className="horizontal-line" />
+        <div className="query-and-response-container">
+          <p className="query-heading">Member ship</p>
+          <div className="credentials-response-container">
+            <p className="profile-name">
+              {localStorage.getItem('accountName')}
+            </p>
+            <p className="profile-password">Password: ********</p>
           </div>
         </div>
-        <hr className="hr-line" />
-        <div className="membership-container">
-          <p className="plan-details">Plan details</p>
-          <p className="membership-premium">Premium</p>
-          <p className="ultra-hd">Ultra HD</p>
+        <hr className="horizontal-line" />
+        <div className="query-and-response-container">
+          <p className="query-heading">Plan Details</p>
+          <div className="plan-response-container">
+            <p className="plan-type-text">Premium</p>
+            <p className="plan-type-quality">Ultra HD</p>
+          </div>
         </div>
-        <hr className="hr-line" />
-        <div className="account-logout-container">
+        <hr className="horizontal-line" />
+        <div className="logout-button-container">
           <button
-            onClick={onClickLogout}
-            className="account-logout"
+            onClick={logoutFromAccount}
+            className="logout-button"
             type="button"
           >
             Logout

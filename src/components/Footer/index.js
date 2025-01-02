@@ -1,27 +1,17 @@
-import './index.css'
 import {FaGoogle, FaTwitter, FaInstagram, FaYoutube} from 'react-icons/fa'
+
+import './index.css'
 
 const Footer = () => (
   <div className="footer-container">
-    <div>
-      <ul className="social-list">
-        <li>
-          <FaGoogle className="social-icon" />
-        </li>
-        <li>
-          <FaTwitter className="social-icon" />
-        </li>
-        <li>
-          <FaInstagram className="social-icon" />
-        </li>
-        <li>
-          <FaYoutube className="social-icon" />
-        </li>
-      </ul>
+    <div className="social-media-icons-container">
+      <FaGoogle className="social-media-icons" />
+      <FaTwitter className="social-media-icons" />
+      <FaInstagram className="social-media-icons" />
+      <FaYoutube className="social-media-icons" />
     </div>
-    <div>
-      <p className="footer-head">Contact us</p>
-    </div>
+    <p className="contact-us-text">Contact us</p>
   </div>
 )
+
 export default Footer

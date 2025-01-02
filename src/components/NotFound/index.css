@@ -1,81 +1,109 @@
-.not-found-container {
+.not-found-page-container {
+  /* background-image: url('https://res.cloudinary.com/dlygjzdo7/image/upload/v1673370842/Netflix%20Clone%20App/Not%20Found/not-found-bg-image_icvqel.png'); */
+  background-image: linear-gradient(
+      180deg,
+      #4368eb -37.08%,
+      rgba(164, 184, 255, 0) 100%
+    ),
+    url('https://res.cloudinary.com/dlygjzdo7/image/upload/v1673370842/Netflix%20Clone%20App/Not%20Found/not-found-bg-image_icvqel.png');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #181818;
-  /* min-height: 92vh; */
-  /* margin-top: 160px; */
-  /* margin-bottom: 60px; */
-  overflow-y: auto;
-  margin: auto;
+  padding: 10px 10%;
 }
 
-@media screen and (min-width: 768px) {
-  .not-found-container {
-    /* margin-top: 120px; */
-    margin-bottom: 0px;
+@media (max-width: 575px) {
+  .not-found-page-container {
+    padding: 10px 10px;
   }
 }
 
-.not-found-videos-view {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: none;
+.not-found-page-heading {
+  font-family: Roboto;
+  font-size: 64px;
+  font-weight: 500;
+  color: #ffffff;
 }
 
-/* .not-found-videos-img {
-  width: 200px;
-  margin-top: 200px;
-} */
-
-@media screen and (min-width: 768px) {
-  .not-found-videos-img {
-    width: 450px;
-    margin-top: 0px;
+@media (max-width: 767px) {
+  .not-found-page-heading {
+    font-size: 50px;
   }
 }
 
-.not-found-videos-heading {
-  font-family: Roboto;
-  font-size: 25px;
-  color: #f1f5f9;
+@media (max-width: 575px) {
+  .not-found-page-heading {
+    font-size: 34px;
+  }
+}
+
+.not-found-description-container {
   text-align: center;
 }
 
-.not-found-videos-note {
+.description-line-one {
   font-family: Roboto;
-  font-size: 18px;
-  color: #f1f5f9;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 30px;
+  margin-left: 5px;
+  margin-right: 5px;
   text-align: center;
 }
-.not-found-container {
-  background-image: url('https://res.cloudinary.com/dyx9u0bif/image/upload/v1657093957/snow-removal-machine-working-high-ski-slope-snowstorm_454047-2149_1_xgxo4o.png');
-  min-height: 100vh;
-  background-size: 100% 100%;
-  /* background-size: cover; */
+
+@media (max-width: 767px) {
+  .description-line-one {
+    font-size: 18px;
+  }
 }
-.not-found-comp-btn {
-  font-family: 'roboto';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 14px;
-  line-height: 24px;
+
+@media (max-width: 575px) {
+  .description-line-one {
+    font-size: 15px;
+  }
+}
+
+.description-line-two {
+  margin-top: 0;
+  font-family: Roboto;
+  font-size: 20px;
+  font-weight: 300;
+  color: #ffffff;
+}
+@media (max-width: 767px) {
+  .description-line-two {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 575px) {
+  .description-line-two {
+    font-size: 15px;
+  }
+}
+
+.go-to-home-button {
+  background-color: #ffffff;
   color: #171f46;
-  width: 127px;
-  height: 48px;
-  background: #ffffff;
-  border-radius: 4px;
-  outline: none;
+  font-family: Roboto;
   border: none;
-  margin-top: 10px;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 6px;
+  outline: none;
   cursor: pointer;
 }
-.not-found-videos-note {
-  margin: 10px 0px;
-}
-.not-found-videos-heading {
-  margin: 10px 0px;
+
+@media (max-width: 575px) {
+  .go-to-home-button {
+    font-size: 12px;
+    padding: 10px 15px;
+    border-radius: 4px;
+  }
 }
