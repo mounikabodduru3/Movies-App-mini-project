@@ -32,12 +32,6 @@ class Header extends Component {
     }))
   }
 
-  navigateToSearchRoute = () => {
-    const {history} = this.props
-
-    history.push('/search')
-  }
-
   onSearchBtnClick = e => {
     e.preventDefault()
     const {searchInput} = this.state

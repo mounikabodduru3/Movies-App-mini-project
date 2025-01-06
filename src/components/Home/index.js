@@ -217,9 +217,7 @@ class Home extends Component {
         return (
           <div className="top-container-middle-text-container">
             <h1 className="movie-poster-heading">{homePageMovie.title}</h1>
-            <h1 className="movie-poster-description">
-              {homePageMovie.overview}
-            </h1>
+            <p className="movie-poster-description">{homePageMovie.overview}</p>
             <button className="play-button" type="button">
               Play
             </button>
